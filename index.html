@@ -41,7 +41,8 @@
         }
         
         .gif {
-    width: 500px; /* ปรับขนาด */
+    width: 100%;  /* ปรับให้เต็มความกว้างของ container */
+    max-width: 500px; /* จำกัดขนาดสูงสุดไม่ให้ใหญ่เกินไป */
     height: auto;
     margin-bottom: 10px; /* เว้นระยะห่างจากข้อความ */
 }
@@ -98,6 +99,9 @@
                 font-size: 4vw;
                 padding: 2vh 4vw;
             }
+            .gif {
+        max-width: 80%; /* ลดขนาด GIF ให้เล็กลง */
+    }
         }
 
         @media (min-width: 1200px) {
