@@ -16,6 +16,7 @@
             text-align: center;
             background-color: #121212;
             background-image: url('https://images.pexels.com/photos/29237693/pexels-photo-29237693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  /* ใส่ URL รูปที่ต้องการ */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -27,9 +28,8 @@
             justify-content: center;
             height: 100vh;
             width: 100vw;
-            max-width: 100%;
-            overflow-x: hidden;
-            padding: 0;
+            padding: 20px;
+            
         }
 
         .container {
@@ -37,16 +37,14 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 90%;
-            max-width: 600px;
+            flex-grow: 1;
         }
         
         .gif {
-            width: 80%;
-            max-width: 400px; 
-            height: auto;
-            margin-bottom: 10px;
-        }
+    width: 500px; /* ปรับขนาด */
+    height: auto;
+    margin-bottom: 10px; /* เว้นระยะห่างจากข้อความ */
+}
 
         .message {
             opacity: 0;
@@ -56,9 +54,9 @@
             font-size: 6vw;
             font-weight: bold;
             text-transform: uppercase;
-            text-align: center;
             max-width: 90%;
-            word-wrap: break-word;
+            text-align: center;
+            position: absolute;
         }
 
         .message.show {
@@ -75,40 +73,36 @@
         }
 
         .button-container {
-            position: fixed;
-            bottom: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
+            margin-top: 10vh; /* ขยับปุ่มขึ้นมาหน่อย */
         }
 
         button {
-            padding: 10px 20px;
-            font-size: 5vw;
-            cursor: pointer;
-            background-color: rgba(255, 255, 255, 0.2);
-            border: 2px solid white;
-            color: white;
-            border-radius: 10px;
-            font-weight: bold;
-            backdrop-filter: blur(40px);
-            transition: all 0.3s ease-in-out;
-            max-width: 90%;
-        }
+    padding: 3vh 20vw;
+    font-size: 5vw;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2); /* สีขาวจางๆ */
+    border: 2px solid white; /* เส้นกรอบสีขาว */
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    backdrop-filter: blur(40px); /* ทำให้ดูโปร่งแสงแบบกระจก */
+    transition: all 0.3s ease-in-out;
+}
+ 
 
         @media (max-width: 600px) {
             .message {
-                font-size: 7vw;
+                font-size: 8vw;
             }
             button {
                 font-size: 4vw;
-                padding: 8px 16px;
+                padding: 2vh 4vw;
             }
         }
 
         @media (min-width: 1200px) {
             .message {
-                font-size: 40px;
+                font-size: 50px;
             }
             button {
                 font-size: 20px;
@@ -117,77 +111,83 @@
         }
     </style>
 </head>
-<body>
+<body style="background-image: url('https://images.pexels.com/photos/29237693/pexels-photo-29237693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
  <div class="container">
+  <div class="message">
+    <img src="https://media4.giphy.com/media/KfBjG41ojhbrSNTElK/giphy.gif" 
+         alt="GIF ตัวอย่าง" class="gif">
+    <p>ต๊ะเอ๋!</p>
+</div>
     <div class="message">
-        <img src="https://media4.giphy.com/media/KfBjG41ojhbrSNTElK/giphy.gif" 
-             alt="GIF ตัวอย่าง" class="gif">
-        <p>ต๊ะเอ๋!</p>
-    </div>
-    <div class="message">
+      
         <p>งงอ้ะดิว่าพี่ส่งอาไยมาให้แฟนนน</p>
     </div>
-    <div class="message">
+        <div class="message">
+       
         <p>แต่...ยังไม่บอกหรอกกกก อิอิ</p>
-        <img src="https://media1.giphy.com/media/l0Iyn7tLB2ElWvQ8U/giphy.gif" alt="GIF ตัวอย่าง" class="gif">
+        <img src="https://media1.giphy.com/media/l0Iyn7tLB2ElWvQ8U/giphy.gif?cid=6c09b952sqmbkbgfcswpjx7q0322h5x19o2hx410jpom2rh1&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="GIF ตัวอย่าง" class="gif">
     </div>
-    <div class="message">
-        <p>อ่ะๆล้อเล่นน่าาาา</p>
-    </div>
-    <div class="message">
-        <p>คืออออ..งี้นะแฟนนน👉🏻👈🏻</p>
-    </div>
-    <div class="message">
-        <p>พี่จะบอกว่าาาาาาาา</p>
-    </div>
-    <div class="message">
-        <p>ว่าาาาาาาาา</p>
-    </div>
-    <div class="message">
-        <p>ว๊าาาาาาาาาาาา</p>
-    </div>
-    <div class="message">
-        <p>55555555พี่ล้อเล่นนนนน</p>
-    </div>
-    <div class="message">
-        <p>เอาดีๆแยะ</p>
-    </div>
-    <div class="message">
-        <p>แฟนหลับตาก่อนกดปุ่มโอเคมั้ยคะ?</p>
-    </div>
-    <div class="message">
-        <p>ไม่โอเคก็ต้องโอเคค่ะ ม๋าม๋าสั่งอิอิ</p>
-    </div>
-    <div class="message">
-        <p>นับ 1 2 3 หลับตาา กดดดดด!!!</p>
-    </div>
-    <div class="message">
-        <img src="https://media1.giphy.com/media/WK7omsLop0431tZjXb/giphy.gif" alt="GIF ตัวอย่าง" class="gif">
-        <p>For U Kub Baeee</p>
-        <p>Luv U Jubjubbbb</p>
-    </div>
+   <div class="message">
+     
+     <p>อ่ะๆล้อเล่นน่าาาา</p>
+   </div>
+      <div class="message">
+     
+     <p>คืออออ..งี้นะแฟนนน👉🏻👈🏻</p>
+   </div>
+
+      <div class="message">
+     
+     <p>พี่จะบอกว่าาาาาาาา</p>
+   </div>
+      <div class="message">
+         <p>ว่าาาาาาาาา</p>
+      </div>
+       <div class="message">
+   <p>ว๊าาาาาาาาาาาา</p>
+ </div>
+  <div class="message">
+   <p>55555555พี่ล้อเล่นนนนน</p>
+ </div>
+  <div class="message">
+   <p>เอาดีๆแยะ</p>
+ </div>
+  <div class="message">
+   <p>แฟนหลับตาก่อนกดปุ่มโอเคมั้ยคะ?</p>
+ </div>
+   <div class="message">
+    <p>ไม่โอเคก็ต้องโอเคค่ะ ม๋าม๋าสั่งอิอิ</p>
+  </div>
+   <div class="message">
+    <p>นับ 1 2 3 หลับตาา กดดดดด!!!</p>
+  </div>
+  <div class="message">
+<img src="https://media1.giphy.com/media/WK7omsLop0431tZjXb/giphy.gif?cid=6c09b9522shy3h59c4ov5t5j9rwkyrvyzb4tkrcvsr3kyt8g&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="GIF ตัวอย่าง" class="gif">
+  <p>For U Kub Baeee</p>
+  <p>Luv U Jubjubbbb</p>
+ </div>
 </div>
 
-<div class="button-container">
-    <button onclick="showNextMessage()">กดสิคะ กดแรงๆเลย🤭</button>
-</div>
+    <div class="button-container">
+        <button onclick="showNextMessage()">กดสิคะ กดแรงๆเลย🤭</button>
+    </div>
 
-<script>
-    let currentIndex = 0;
-    function showNextMessage() {
-        const messages = document.querySelectorAll(".message");
-        
-        if (currentIndex > 0) {
-            messages[currentIndex - 1].classList.add("fade-out");
-        }
+    <script>
+        let currentIndex = 0;
+        function showNextMessage() {
+            const messages = document.querySelectorAll(".message");
+            
+            if (currentIndex > 0) {
+                messages[currentIndex - 1].classList.add("fade-out"); // ทำให้ข้อความก่อนหน้าค่อยๆ หาย
+            }
 
-        if (currentIndex < messages.length) {
-            messages[currentIndex].classList.add("show");
-            currentIndex++;
+            if (currentIndex < messages.length) {
+                messages[currentIndex].classList.add("show");
+                currentIndex++; // ขยับไปยังข้อความถัดไป
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
