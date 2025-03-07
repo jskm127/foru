@@ -75,7 +75,11 @@
         }
 
         .button-container {
-            margin-top: 20px;
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         button {
@@ -89,6 +93,7 @@
             font-weight: bold;
             backdrop-filter: blur(40px);
             transition: all 0.3s ease-in-out;
+            max-width: 90%;
         }
 
         @media (max-width: 600px) {
